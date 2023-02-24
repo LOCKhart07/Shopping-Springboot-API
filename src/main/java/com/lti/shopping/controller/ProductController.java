@@ -37,6 +37,7 @@ public class ProductController {
         return new ResponseEntity<>(productService.addProduct(product), httpHeaders, httpStatus);
     }
 
+    //  http://127.0.0.1:8069/api/products/1
     @RequestMapping(value = {"{product_id}"}, method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<Product> getProducts(@PathVariable(name = "product_id") int productID) {
         Product product = productService.getProductByID(productID);
@@ -47,6 +48,7 @@ public class ProductController {
         return new ResponseEntity<>(product, httpHeaders, httpStatus);
     }
 
+    //  http://127.0.0.1:8069/api/products/1
     @RequestMapping(value = {"{product_id}"}, method = RequestMethod.DELETE, produces = "application/json")
     public ResponseEntity<Product> removeProduct(@PathVariable(name = "product_id") int productID) {
         Product product = productService.removeProductByID(productID);
@@ -57,6 +59,7 @@ public class ProductController {
         return response;
     }
 
+    //  http://127.0.0.1:8069/api/products
     @RequestMapping(method = RequestMethod.PUT, produces = "application/json", consumes = "application/json")
     public ResponseEntity<Product> updateProduct(@RequestBody Product product) {
         Product updatedProduct = productService.updateProduct(product);
