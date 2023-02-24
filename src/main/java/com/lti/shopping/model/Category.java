@@ -15,10 +15,14 @@ public class Category {
     @Column(name = "name")
     String name;
 
-    public Category(int id, String name) {
+    @Column(imageUrl= "imageurl")
+    String imageUrl;
+
+    public Category(int id, String name, String imageUrl) {
         super();
         this.id = id;
         this.name = name;
+        this.imageUrl = imageUrl;
     }
 
     public Category() {
@@ -34,15 +38,23 @@ public class Category {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
+    public String getImageUrl(){
+        return imageUrl;
+    }
 
+    public void setImageUrl(String imageUrl){
+        this.imageUrl= imageUrl;
+    }
     @Override
     public String toString() {
-        return "Category{" + "id=" + id + ", name='" + name + '\'' + '}';
+        return "Category{" + "id=" + id + ", name='" + name + ", imageUrl=" + '\'' + '}';
     }
 }
