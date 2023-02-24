@@ -835,3 +835,97 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2023-02-24T11:37:07.452+05:30  INFO 37996 --- [http-nio-8069-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-02-24T11:37:07.454+05:30  INFO 37996 --- [http-nio-8069-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-02-24T11:37:07.614+05:30  INFO 37996 --- [http-nio-8069-exec-1] c.lti.shopping.service.ProductService    : Output all products
+2023-02-24T11:41:08.534+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : Starting ShoppingApplication using Java 19.0.2 with PID 35756 (D:\Training\Java Advanced\shopping\target\classes started by 10715879 in D:\Training\Java Advanced\shopping)
+2023-02-24T11:41:08.537+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-02-24T11:41:08.607+05:30  INFO 35756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-24T11:41:08.607+05:30  INFO 35756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-24T11:41:09.515+05:30  INFO 35756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24T11:41:09.595+05:30  INFO 35756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interfaces.
+2023-02-24T11:41:10.432+05:30  INFO 35756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8069 (http)
+2023-02-24T11:41:10.447+05:30  INFO 35756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24T11:41:10.448+05:30  INFO 35756 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-24T11:41:10.514+05:30  INFO 35756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-24T11:41:10.515+05:30  INFO 35756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1907 ms
+2023-02-24T11:41:10.762+05:30  INFO 35756 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24T11:41:10.857+05:30  INFO 35756 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-24T11:41:11.211+05:30  WARN 35756 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-24T11:41:11.575+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-24T11:41:12.264+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53def3a
+2023-02-24T11:41:12.268+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-24T11:41:12.365+05:30  INFO 35756 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-24T11:41:13.530+05:30  INFO 35756 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24T11:41:13.541+05:30  INFO 35756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24T11:41:13.936+05:30  WARN 35756 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24T11:41:14.509+05:30  INFO 35756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-24T11:41:14.572+05:30  INFO 35756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8069 (http) with context path ''
+2023-02-24T11:41:14.601+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : Started ShoppingApplication in 6.599 seconds (process running for 7.292)
+2023-02-24T11:41:19.712+05:30  INFO 35756 --- [http-nio-8069-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-24T11:41:19.713+05:30  INFO 35756 --- [http-nio-8069-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-24T11:41:19.714+05:30  INFO 35756 --- [http-nio-8069-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-24T11:41:19.850+05:30  INFO 35756 --- [http-nio-8069-exec-1] c.lti.shopping.service.ProductService    : Output all products
+2023-02-24T11:43:01.600+05:30  INFO 35756 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-24T11:43:01.635+05:30  INFO 35756 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-24T11:43:01.636+05:30  INFO 35756 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-24T11:43:01.643+05:30  INFO 35756 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24T11:43:01.647+05:30  INFO 35756 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-24T11:43:01.656+05:30  INFO 35756 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-24T11:43:01.754+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : Starting ShoppingApplication using Java 19.0.2 with PID 35756 (D:\Training\Java Advanced\shopping\target\classes started by 10715879 in D:\Training\Java Advanced\shopping)
+2023-02-24T11:43:01.755+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-02-24T11:43:01.990+05:30  INFO 35756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24T11:43:02.005+05:30  INFO 35756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+2023-02-24T11:43:02.137+05:30  INFO 35756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8069 (http)
+2023-02-24T11:43:02.138+05:30  INFO 35756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24T11:43:02.139+05:30  INFO 35756 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-24T11:43:02.181+05:30  INFO 35756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-24T11:43:02.182+05:30  INFO 35756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 424 ms
+2023-02-24T11:43:02.235+05:30  INFO 35756 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24T11:43:02.238+05:30  WARN 35756 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-24T11:43:02.242+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-02-24T11:43:02.268+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6db66ba3
+2023-02-24T11:43:02.269+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-02-24T11:43:02.272+05:30  INFO 35756 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-24T11:43:02.392+05:30  INFO 35756 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24T11:43:02.393+05:30  INFO 35756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24T11:43:02.539+05:30  WARN 35756 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24T11:43:02.679+05:30  INFO 35756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-24T11:43:02.701+05:30  INFO 35756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8069 (http) with context path ''
+2023-02-24T11:43:02.706+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : Started ShoppingApplication in 0.982 seconds (process running for 115.398)
+2023-02-24T11:43:02.709+05:30  INFO 35756 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-24T11:43:39.033+05:30  INFO 35756 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-02-24T11:43:39.056+05:30  INFO 35756 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-24T11:43:39.059+05:30  INFO 35756 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24T11:43:39.060+05:30  INFO 35756 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-02-24T11:43:39.066+05:30  INFO 35756 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-02-24T11:43:39.145+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : Starting ShoppingApplication using Java 19.0.2 with PID 35756 (D:\Training\Java Advanced\shopping\target\classes started by 10715879 in D:\Training\Java Advanced\shopping)
+2023-02-24T11:43:39.147+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-02-24T11:43:39.296+05:30  INFO 35756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24T11:43:39.306+05:30  INFO 35756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2023-02-24T11:43:39.411+05:30  INFO 35756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8069 (http)
+2023-02-24T11:43:39.412+05:30  INFO 35756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24T11:43:39.413+05:30  INFO 35756 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-24T11:43:39.438+05:30  INFO 35756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-24T11:43:39.439+05:30  INFO 35756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 288 ms
+2023-02-24T11:43:39.521+05:30  INFO 35756 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24T11:43:39.523+05:30  WARN 35756 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-24T11:43:39.526+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-02-24T11:43:39.539+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f8bb2d0
+2023-02-24T11:43:39.540+05:30  INFO 35756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-02-24T11:43:39.541+05:30  INFO 35756 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-24T11:43:39.604+05:30  INFO 35756 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24T11:43:39.605+05:30  INFO 35756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24T11:43:39.662+05:30  WARN 35756 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24T11:43:39.745+05:30  INFO 35756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-24T11:43:39.759+05:30  INFO 35756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8069 (http) with context path ''
+2023-02-24T11:43:39.762+05:30  INFO 35756 --- [restartedMain] com.lti.shopping.ShoppingApplication     : Started ShoppingApplication in 0.644 seconds (process running for 152.453)
+2023-02-24T11:43:39.764+05:30  INFO 35756 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-02-24T11:44:39.682+05:30  INFO 35756 --- [http-nio-8069-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-24T11:44:39.682+05:30  INFO 35756 --- [http-nio-8069-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-24T11:44:39.683+05:30  INFO 35756 --- [http-nio-8069-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-24T11:44:39.749+05:30  WARN 35756 --- [http-nio-8069-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
+2023-02-24T11:44:55.731+05:30  INFO 35756 --- [http-nio-8069-exec-4] c.lti.shopping.service.ProductService    : Added Product
+2023-02-24T11:47:33.320+05:30  INFO 35756 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2023-02-24T11:47:33.343+05:30  INFO 35756 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-24T11:47:33.343+05:30  INFO 35756 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-24T11:47:33.346+05:30  INFO 35756 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24T11:47:33.347+05:30  INFO 35756 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-02-24T11:47:33.352+05:30  INFO 35756 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
