@@ -20,7 +20,7 @@ public class ProductService implements IProductService{
     @Override
     public List<Product> getAllProducts(){
         List<Product> products =productRepository.findAll();
-        LOGGER.info(products.toString());
+        LOGGER.info("Output all products");
         return products;
     }
 
