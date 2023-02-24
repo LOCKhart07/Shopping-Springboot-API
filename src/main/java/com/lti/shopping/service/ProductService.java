@@ -28,15 +28,15 @@ public class ProductService implements IProductService {
 
     @Override
     public Product getProductByID(int id) {
-        LOGGER.info("Get employee by id");
-
         Optional<Product> product = productRepository.findById(id);
 
         if (product.isEmpty()) {
-            String errorMessage = "Employee with ID:" + id + " not found";
+            String errorMessage = "Product with ID:" + id + " not found";
             LOGGER.warn(errorMessage);
             throw new ProductNotFoundException(errorMessage);
         }
+
+        LOGGER.info("Fetched product by id");
         return product.get();
     }
 
@@ -53,12 +53,17 @@ public class ProductService implements IProductService {
 
     @Override
     public Product removeProductByID(int id) {
-        return null;
+        Product product = this.getProductByID(id);
+        productRepository.deleteById(id);
+        LOGGER.info("Removed Product");
+        return product;
     }
 
     @Override
-    public Product updateProductByID(Product product) {
-        return null;
+    public Product updateProduct(Product product) {
+        this.getProductByID(product.getId());
+        LOGGER.info("Updated Product");
+        return productRepository.save(product);
     }
 
 }

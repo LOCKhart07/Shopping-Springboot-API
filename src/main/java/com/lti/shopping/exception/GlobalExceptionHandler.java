@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ProductNotFoundException.class)
-    public ResponseEntity<Product> handleEmployeeNotFoundException(ProductNotFoundException e) {
+    public ResponseEntity<Product> handleProductNotFoundException(ProductNotFoundException e) {
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("message", e.getMessage());

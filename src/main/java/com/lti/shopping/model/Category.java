@@ -4,18 +4,18 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="category")
+@Table(name = "category")
 public class Category {
     @Id
-    @GenericGenerator(name = "product_sequence", strategy = "increment")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_sequence")
+    @GenericGenerator(name = "category_sequence", strategy = "increment")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_sequence")
     @Column(name = "id")
     int id;
 
     @Column(name = "name")
     String name;
 
-    @Column(imageUrl= "imageurl")
+    @Column(name = "image_url")
     String imageUrl;
 
     public Category(int id, String name, String imageUrl) {
@@ -46,13 +46,15 @@ public class Category {
 
         this.name = name;
     }
-    public String getImageUrl(){
+
+    public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl){
-        this.imageUrl= imageUrl;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
+
     @Override
     public String toString() {
         return "Category{" + "id=" + id + ", name='" + name + ", imageUrl=" + '\'' + '}';
