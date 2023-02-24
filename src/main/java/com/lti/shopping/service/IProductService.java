@@ -10,5 +10,6 @@ public interface IProductService {
     Product getProductByID(int id);
     List getProductsByCategory(Category category);
     Product addProduct(Product product);
-
+    Product removeProductByID(int id);
+    Product updateProductByID(Product product);
 }

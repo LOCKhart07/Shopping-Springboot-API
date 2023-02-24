@@ -1,5 +1,6 @@
 package com.lti.shopping.service;
 
+import com.lti.shopping.exception.ProductNotFoundException;
 import com.lti.shopping.model.Category;
 import com.lti.shopping.model.Product;
 import com.lti.shopping.repository.ProductRepository;
@@ -9,24 +10,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
-public class ProductService implements IProductService{
+public class ProductService implements IProductService {
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     ProductRepository productRepository;
 
     @Override
-    public List<Product> getAllProducts(){
-        List<Product> products =productRepository.findAll();
-        LOGGER.info(products.toString());
+    public List<Product> getAllProducts() {
+        List<Product> products = productRepository.findAll();
+        LOGGER.info("Output all products");
         return products;
     }
 
     @Override
     public Product getProductByID(int id) {
-        return null;
+        LOGGER.info("Get employee by id");
+
+        Optional<Product> product = productRepository.findById(id);
+
+        if (product.isEmpty()) {
+            String errorMessage = "Employee with ID:" + id + " not found";
+            LOGGER.warn(errorMessage);
+            throw new ProductNotFoundException(errorMessage);
+        }
+        return product.get();
     }
 
     @Override
@@ -36,8 +47,18 @@ public class ProductService implements IProductService{
 
     @Override
     public Product addProduct(Product product) {
+        LOGGER.info("Added Product");
+        return productRepository.save(product);
+    }
+
+    @Override
+    public Product removeProductByID(int id) {
         return null;
     }
 
+    @Override
+    public Product updateProductByID(Product product) {
+        return null;
+    }
 
 }
