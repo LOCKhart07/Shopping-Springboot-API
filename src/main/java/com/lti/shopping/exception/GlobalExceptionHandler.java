@@ -1,6 +1,6 @@
-package com.lti.springbootdemo.exception;
+package com.lti.shopping.exception;
 
-import com.lti.springbootdemo.model.Employee;
+import com.lti.shopping.model.Product;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(EmployeeNotFoundException.class)
-    public ResponseEntity<Employee> handleEmployeeNotFoundException(EmployeeNotFoundException e) {
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<Product> handleEmployeeNotFoundException(ProductNotFoundException e) {
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("message", e.getMessage());
