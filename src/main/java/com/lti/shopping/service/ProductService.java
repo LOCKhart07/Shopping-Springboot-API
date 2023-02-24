@@ -11,15 +11,15 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProductService implements IProductService{
+public class ProductService implements IProductService {
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     ProductRepository productRepository;
 
     @Override
-    public List<Product> getAllProducts(){
-        List<Product> products =productRepository.findAll();
+    public List<Product> getAllProducts() {
+        List<Product> products = productRepository.findAll();
         LOGGER.info("Output all products");
         return products;
     }
@@ -36,8 +36,8 @@ public class ProductService implements IProductService{
 
     @Override
     public Product addProduct(Product product) {
-        return null;
+        LOGGER.info("Added Product");
+        return productRepository.save(product);
     }
-
 
 }
