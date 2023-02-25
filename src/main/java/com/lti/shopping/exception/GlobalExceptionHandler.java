@@ -1,5 +1,6 @@
 package com.lti.shopping.exception;
 
+import com.lti.shopping.model.Category;
 import com.lti.shopping.model.Product;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ProductNotFoundException.class)
     public ResponseEntity<Product> handleProductNotFoundException(ProductNotFoundException e) {
+        HttpStatus httpStatus = HttpStatus.NOT_FOUND;
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.add("message", e.getMessage());
+        return new ResponseEntity<>(null, httpHeaders, httpStatus);
+    }
+
+    @ExceptionHandler(CategoryNotFoundException.class)
+    public ResponseEntity<Category> handleCategoryNotFoundException(CategoryNotFoundException e) {
         HttpStatus httpStatus = HttpStatus.NOT_FOUND;
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("message", e.getMessage());
