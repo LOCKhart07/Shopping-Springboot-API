@@ -6,6 +6,11 @@ import jakarta.persistence.*;
 @Table(name = "order_item")
 public class OrderItem {
     //    values as per db schema designed
+
+    @Id
+    @Column(name = "order_item_it")
+    private int orderItemId;
+
     @Column(name = "item_name")
     private String itemName;
 
