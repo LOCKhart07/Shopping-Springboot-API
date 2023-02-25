@@ -1,57 +1,43 @@
 package com.lti.shopping.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "orderItem")
+@Table(name = "order_item")
 public class OrderItem {
-//    values as per db schema designed
-    private String item_name;
-    private String order;
+    //    values as per db schema designed
+    @Column(name = "item_name")
+    private String itemName;
+
+    @Column(name = "quantity")
     private int quantity;
 
     @ManyToOne
-    @JoinColumn(name = "orderId" )
-    private OrderItem orderItem;
-    public OrderItem(String item_name, String order, int quantity, OrderItem orderItem ){
-        this.item_name=item_name;
-        this.order=order;
-        this.quantity=quantity;
-        this.orderItem = orderItem;
-    }
+    @JoinColumn(name = "order_id")
+    private Orders order;
 
-    public OrderItem(String item_name, String order, int quantity) {
+    public OrderItem(String itemName, Orders order, int quantity) {
         super();
-        this.item_name = item_name;
+        this.itemName = itemName;
         this.order = order;
         this.quantity = quantity;
     }
 
+    public OrderItem() {
+        super();
+    }
+
     @Override
-    public String toString(){
-        return "OrderItem{" +
-                "item_name=" + item_name + "quantity=" + quantity +
-                ", order='" + order + '\'' +
-                '}';
+    public String toString() {
+        return "OrderItem{" + "item_name=" + itemName + "quantity=" + quantity + ", order='" + order + '\'' + '}';
     }
 
-    public String getItem_name() {
-        return item_name;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setItem_name(String item_name) {
-        this.item_name = item_name;
-    }
-
-    public String getOrder() {
-        return order;
-    }
-
-    public void setOrder(String order) {
-        this.order = order;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public int getQuantity() {
@@ -62,11 +48,11 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public OrderItem getOrderItem() {
-        return orderItem;
+    public Orders getOrder() {
+        return order;
     }
 
-    public void setOrderItem(OrderItem orderItem) {
-        this.orderItem = orderItem;
+    public void setOrder(Orders order) {
+        this.order = order;
     }
 }
